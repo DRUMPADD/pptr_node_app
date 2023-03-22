@@ -1,0 +1,147 @@
+.search-form {
+    width: 90%;
+}
+
+.search-form .search-box {
+    margin: 0 auto;
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box .inp-search {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1em;
+    width: 80%;
+    color: #222;
+    border: 1px solid #22222294;
+    border-right: 2px solid #22222294;
+    border-bottom: 4px solid #22222294;
+    box-shadow: 0 0 0 1px #222;
+    transform: translate(3px, 4px);
+    transition: .1s linear;
+}
+
+.inp-search:focus {
+    box-shadow: 3px 4px 1px 1px #222;
+    transform: translate(0);
+}
+
+.search-box > button {
+    border: none;
+    padding: 10px;
+    width: 17%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    align-items: center;
+    border: 2px solid #22222294;
+    color: #222;
+    box-shadow: 3px 3px 0px 1px #222;
+    cursor: pointer;
+}
+
+
+.search-box button:active {
+    box-shadow: 0 0 0 1px #888;
+    transform: translate(2px, 3px);
+}
+
+.option-pptr {
+    padding: 5px;
+    width: 100%;
+    transition: background .3s linear;
+}
+.option-pptr:hover {
+    background-color: #1a2a20;
+    color: #fff;
+}
+
+
+div p > span {
+    font-weight: 700;
+    display: none;
+}
+
+
+.active {
+    display: inline;
+}
+
+.container-permission {
+    margin: 20px;
+    transition: .2s linear;
+    display: none;
+}
+
+.container-certificates {
+    display: none;
+}
+
+.container-certificates.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column
+}
+.container-permission.active {
+    display: inline;
+}
+
+.searchBox.input {
+    font-size: 1em;
+    width: 0;
+    opacity: 0;
+    transition: .3s linear;
+}
+
+.searchBox.input.active-inp {
+    padding: 7px 8px;
+    width: auto;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    opacity: 1;
+}
+
+.content-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btnUpdate {
+    padding: 10px 8px;
+    border-radius: 10px;
+    background: rgba(0, 154, 250, 0.8);
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.1em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+.btnUpdate.cancel {
+    background: rgba(255, 0, 0, 1);
+}
+
+.btnReset {
+    border: none;
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    align-items: center;
+    border: 2px solid #22222294;
+    color: #222;
+    box-shadow: 3px 3px 0px 1px #222;
+    cursor: pointer;
+}

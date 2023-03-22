@@ -1,0 +1,253 @@
+.app {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  /* ?? -- Navbar -- */
+  
+  .navbar {
+    width: 20%;
+    border-right: 4px solid #222;
+    height: 100vh;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: calc(50%/3);
+  }
+  
+  .head-navbar {
+    height: 6vmin;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color);
+  }
+  
+  .head-navbar p {
+    color: #fff;
+    margin-left: 5%;
+    font-size: 1.4em;
+    font-weight: 600;
+  }
+  
+  .cont-btnArrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    margin-right: 5%;
+  }
+  
+  #btnArrow {
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: none;
+    color: #222;
+    border-radius: 50%;
+    padding: 2px 8px;
+    cursor: pointer;
+    font-size: 2em;
+    transition: rotate .3s linear;
+  }
+  
+  .icons {
+    width: 100%;
+    /* width: 100%; */
+    transition: transform .5s linear;
+  }
+  
+  .navbar ul > li {
+    list-style: none;
+  }
+  
+  .nav-links {
+    position: relative;
+    transition: transform .3s linear;
+    height: calc(100vmin - 6vmin);
+  }
+  
+  .nav-links.hidden {
+    transform: translateX(-100%);
+  }
+  
+  .icons .nav-link.hidden  {
+    transform: rotate(180deg);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .nav-link {
+    width: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform .3s linear, box-shadow .3s linear, color .3s linear;
+  }
+  
+  .link {
+    color: #000;
+    /* width: 100%; */
+    font-size: 1.3em;
+    padding: 5px 10px;
+  }
+  
+  .nav-link:hover {
+    /* background-color: #444; */
+    box-shadow: 10px 10px 10px #000;
+    transform: scale(1.2);
+  }
+  
+  /* ?? -- End Navbar -- */
+  
+  /* ?? -- Container -- */
+  .container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 4px;
+    overflow-x: hidden;
+  }
+  
+  .container > h1 {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  @media screen and (max-width: 1400px) {
+    .container {
+      max-height: 100%;
+      overflow-y: scroll;
+      transition: all .2s linear;
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .container {
+      max-height: 100%;
+      overflow-x: hidden;
+      transition: all .2s linear;
+    }
+  
+    .head-navbar p {
+      font-size: 3vh;
+    }
+  
+    .head-navbar > button {
+      width: 50%;
+    }
+    
+    .nav-link {
+      text-align: center;
+      width: 100%;
+      font-size: 13px;
+    }
+  
+    .nav-link:hover {
+      /* box-shadow: 10px 10px 10px #000; */
+      transform: scale(.8);
+    }
+  
+    .link {
+      display: block;
+      text-align: center;
+      white-space: wrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  
+  
+  @media screen and (max-width: 800px) {
+    .app {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      /* overflow-x: hidden; */
+    }
+  
+    .navbar {
+      border: none;
+      width: 100%;
+      height: 50px;
+      display: flex;
+      padding: 10px;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--color);
+      overflow: hidden;
+    }
+  
+    .head-navbar {
+      height: 0;
+      /* display: block; */
+      justify-content: center;
+    }
+  
+    .head-navbar p {
+      margin-left: 0px;
+      font-size: 1em;
+    }
+  
+    .nav-links {
+      justify-content: space-between;
+      gap: 40px;
+      height: 100%;
+      flex-direction: row;
+    }
+  
+    .cont-btnArrow {
+      display: none;
+    }
+  
+    .nav-link {
+      width: auto;
+      transition: all .3s linear;
+    }
+  
+    .link {
+      color: #fff;
+      font-size: 1.2em;
+      padding: 0px;
+    }
+  
+    .nav-link:hover {
+      box-shadow: none;
+      transform: scale(1.1);
+    }
+  
+    .container {
+      width: 100%;
+      height: 100vh;
+    }
+    
+  }
+  
+  @media screen and (max-width: 550px) {
+    .link {
+      padding: 3px;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+    .nav-link:hover {
+      box-shadow: 1px 2px 3px #000;
+    }
+  }
+  
+  
+  
+  /* ?? -- End Container -- */
